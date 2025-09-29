@@ -58,18 +58,24 @@ h1 {
 }
 
 #contact-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  background-color: #000; /* Color azul del contacto */
+  color: white;
+  padding: 16px 25px; /* Igual que submit-btn */
+  border: none;
+  border-radius: 8px; /* Igual que submit-btn */
+  font-size: 1rem;
+  font-weight: 500; /* Bolder text */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+  width: 100%; /* Igual que submit-btn */
+  box-sizing: border-box;
 }
 
 #contact-btn:hover {
-    background-color: #0056b3;
+  background-color: #333; /* Mantener tu azul más oscuro */
+  transform: translateY(-3px); /* Igual que submit-btn */
 }
 
 
@@ -185,7 +191,6 @@ h1 {
   color: #555;
   font-size: 0.95rem;
 }
-
 
 #contact {
   padding: 80px 20px;
