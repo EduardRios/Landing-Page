@@ -21,16 +21,29 @@ section {
 
 /* Hero Section - Professional Layout */
 #hero {
+  padding: 20px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.hero-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
-  max-width: 1100px;
-  margin: 60px auto;
   text-align: left;
 }
 
 .hero-text {
+  font-size: 1.2rem;
   flex-basis: 50%;
 }
 
@@ -46,15 +59,6 @@ section {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #555;
 }
 
 #contact-btn {
@@ -92,22 +96,17 @@ h1 {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   #hero {
+    padding: 40px 20px;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content-wrapper {
     flex-direction: column;
     text-align: center;
     gap: 30px;
-    margin: 40px auto;
-  }
-
-  .hero-text, .hero-image-container {
-    flex-basis: 100%;
-  }
-
-  .hero-img {
-    max-width: 80%;
-  }
-
-  h1 {
-    font-size: 2rem;
   }
 }
 
