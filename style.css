@@ -43,7 +43,7 @@ nav a:hover {
 section {
   padding: 40px 20px;
   text-align: center;
-  scroll-snap-align: start;  /*Snap scroll*/
+  scroll-snap-align: start;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
@@ -129,18 +129,62 @@ section {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-  #hero {
-    padding: 40px 20px;
+  nav {
+    gap: 15px;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  #hero h1 {
-    font-size: 2.2rem;
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 60px 20px;
+    height: auto; /* Allow content to define height on mobile */
+  }
+
+  #hero {
+    padding: 60px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #hero h1,
+  #benefits h1,
+  #services h1,
+  #contact h1 {
+    font-size: 2rem;
   }
 
   .hero-content-wrapper {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 40px;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+  }
+
+  .benefits-intro,
+  .services-intro,
+  .contact-intro {
+    font-size: 1rem;
+  }
+
+  .benefits-container,
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 35px 25px;
+  }
+
+  .contact-form {
+    gap: 20px;
   }
 }
 
