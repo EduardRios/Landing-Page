@@ -1,11 +1,19 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #f9fafb;
+  background-color: #f0f2f5;
   color: #333;
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -17,19 +25,27 @@ nav {
 section {
   padding: 40px 20px;
   text-align: center;
+  scroll-snap-align: start;  /*Snap scroll*/
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Hero Section - Professional Layout */
 #hero {
-  padding: 20px 20px;
+  background-color: #ffffff;
+  padding: 80px 20px 20px;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: flex-start;
 }
 
 #hero h1 {
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   color: #1a1a1a;
   font-weight: 600;
 }
@@ -110,20 +126,21 @@ section {
   }
 }
 
+/* Benefits Section - Professional Layout */
 #benefits {
   padding: 80px 20px;
   text-align: center;
-  background-color: #fafafa;
 }
 
-#benefits h2 {
-  font-size: 2rem;
+#benefits h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
   color: #222;
 }
 
 .benefits-intro {
-  max-width: 700px;
+  font-size: 1.2rem;
+  max-width: 900px;
   margin: 0 auto 40px auto;
   color: #555;
 }
@@ -146,36 +163,36 @@ section {
   transform: translateY(-5px);
 }
 
+/* Services Section - Professional Layout */
 #services {
-  padding: 80px 20px;
+  padding: 80px 20px 20px;
   text-align: center;
   background-color: #ffffff;
+  justify-content: flex-start;
 }
 
-#services h2 {
-  font-size: 2rem;
+#services h1 {
+  font-size: 3rem;
   color: #222;
   margin-bottom: 20px;
 }
 
 .services-intro {
-  max-width: 700px;
-  margin: 0 auto 50px auto;
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
   color: #555;
-  font-size: 1rem;
 }
 
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .service-card {
   background: white;
-  padding: 25px;
+  padding: 50px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -191,27 +208,28 @@ section {
   font-size: 0.95rem;
 }
 
+/* Contact Section - Professional Layout */
 #contact {
-  padding: 80px 20px;
+  padding: 80px 20px 20px;
   text-align: center;
-  background-color: #fff; /* White background */
+  justify-content: flex-start;
 }
 
-#contact h2 {
-  font-size: 2.2rem; /* Slightly larger */
-  color: #111; /* Darker text */
-  margin-bottom: 15px;
+#contact h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #222;
 }
 
 .contact-intro {
-  color: #666;
-  max-width: 500px;
-  margin: 0 auto 50px auto; /* More space at bottom */
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  color: #555;
 }
 
 .contact-form {
+  width: 100%;
   max-width: 550px; /* Slightly narrower */
   margin: 0 auto;
   display: flex;
