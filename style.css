@@ -44,7 +44,7 @@ section {
   padding: 40px 20px;
   text-align: center;
   scroll-snap-align: start;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
