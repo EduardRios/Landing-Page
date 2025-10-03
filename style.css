@@ -39,6 +39,36 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+#lang-switcher {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+#lang-switcher button {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#lang-switcher button:hover {
+  background-color: #f0f0f0;
+}
+
+#lang-switcher button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
 
 section {
   padding: 40px 20px;
@@ -138,6 +168,11 @@ section {
     padding: 15px 20px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  #lang-switcher {
+    position: static;
+    transform: none;
   }
 
   nav a {
@@ -353,7 +388,9 @@ footer {
 
 .footer-links {
   display: flex;
-  gap: 25px;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 .footer-icon {
@@ -380,5 +417,10 @@ footer {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 25px;
   }
 }

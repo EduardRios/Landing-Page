@@ -8,17 +8,21 @@
   </head>
   <body>
     <nav>
-      <a href="#hero">Inicio</a>
-      <a href="#benefits">Beneficios</a>
-      <a href="#services">Servicios</a>
-      <a href="#contact">Contacto</a>
+      <div id="lang-switcher">
+        <button data-lang="es">ES</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="#hero" data-key="nav_home">Inicio</a>
+      <a href="#benefits" data-key="nav_benefits">Beneficios</a>
+      <a href="#services" data-key="nav_services">Servicios</a>
+      <a href="#contact" data-key="nav_contact">Contacto</a>
     </nav>
 
     <section id="hero">
-      <h1>¿Tu negocio aún no tiene página web?</h1>
+      <h1 data-key="hero_title">¿Tu negocio aún no tiene página web?</h1>
       <div class="hero-content-wrapper">
         <div class="hero-text">
-          <p>
+          <p data-key="hero_text">
             Impulsa tu marca con un sitio profesional y moderno.<br />
             Llega a más clientes, transmite confianza y mantente disponible las
             24 horas. <br />
@@ -26,7 +30,7 @@
             preparado para crecer.
           </p>
 
-          <button id="contact-btn">Contáctame</button>
+          <button id="contact-btn" data-key="hero_button">Contáctame</button>
         </div>
 
         <div class="hero-image-container">
@@ -36,51 +40,55 @@
     </section>
 
     <section id="benefits">
-      <h1>¿Por qué tu negocio necesita una página web?</h1>
-      <p class="benefits-intro">
+      <h1 data-key="benefits_title">
+        ¿Por qué tu negocio necesita una página web?
+      </h1>
+      <p class="benefits-intro" data-key="benefits_intro">
         No es un gasto, es una inversión que impulsa tu crecimiento. <br />
         Estos son algunos de los principales beneficios:
       </p>
 
       <div class="benefits-container">
         <div class="benefit-card">
-          <h3>🌐 Presencia 24/7</h3>
-          <p>
+          <h3 data-key="benefit1_title">🌐 Presencia 24/7</h3>
+          <p data-key="benefit1_text">
             Tu negocio estará disponible para tus clientes todo el día, todos
             los días.
           </p>
         </div>
         <div class="benefit-card">
-          <h3>🚀 Más visibilidad</h3>
-          <p>
+          <h3 data-key="benefit2_title">🚀 Más visibilidad</h3>
+          <p data-key="benefit2_text">
             Con una web optimizada, las personas te encontrarán fácilmente en
             Google y redes sociales.
           </p>
         </div>
         <div class="benefit-card">
-          <h3>💬 Confianza y profesionalismo</h3>
-          <p>
+          <h3 data-key="benefit3_title">💬 Confianza y profesionalismo</h3>
+          <p data-key="benefit3_text">
             Una página bien diseñada transmite credibilidad y profesionalismo a
             tus clientes.
           </p>
         </div>
         <div class="benefit-card">
-          <h3>💰 Más ventas y oportunidades</h3>
-          <p>
+          <h3 data-key="benefit4_title">💰 Más ventas y oportunidades</h3>
+          <p data-key="benefit4_text">
             Conecta con nuevos clientes y genera más ingresos sin depender solo
             de redes sociales.
           </p>
         </div>
         <div class="benefit-card">
-          <h3>📈 Mejora tu posicionamiento</h3>
-          <p>
+          <h3 data-key="benefit5_title">📈 Mejora tu posicionamiento</h3>
+          <p data-key="benefit5_text">
             Una web bien estructurada te ayuda a aparecer en los resultados de
             búsqueda y atraer clientes de manera orgánica sin pagar publicidad.
           </p>
         </div>
         <div class="benefit-card">
-          <h3>🪄 Automatización y ahorro de tiempo</h3>
-          <p>
+          <h3 data-key="benefit6_title">
+            🪄 Automatización y ahorro de tiempo
+          </h3>
+          <p data-key="benefit6_text">
             Puedes recibir mensajes, reservas o pedidos directamente desde la
             web, incluso cuando no estás disponible.
           </p>
@@ -89,57 +97,61 @@
     </section>
 
     <section id="services">
-      <h1>💼 Servicios</h1>
-      <p class="services-intro">
+      <h1 data-key="services_title">💼 Servicios</h1>
+      <p class="services-intro" data-key="services_intro">
         Diseños modernos, rendimiento optimizado y soluciones adaptadas a tu
         negocio. Elige el servicio que mejor se ajusta a tus necesidades.
       </p>
 
       <div class="services-container">
         <div class="service-card">
-          <h3>🚀 Landing Page</h3>
-          <p>
+          <h3 data-key="service1_title">🚀 Landing Page</h3>
+          <p data-key="service1_text">
             Una página única y atractiva ideal para presentar tu negocio o
             campaña y captar clientes de inmediato.
           </p>
-          <p class="note">Perfecta para emprendedores o pequeños negocios.</p>
+          <p class="note" data-key="service1_note">
+            Perfecta para emprendedores o pequeños negocios.
+          </p>
           <p>💲</p>
         </div>
 
         <div class="service-card">
-          <h3>🌐 Sitio Web Completo</h3>
-          <p>
+          <h3 data-key="service2_title">🌐 Sitio Web Completo</h3>
+          <p data-key="service2_text">
             Un sitio personalizado con varias secciones para mostrar tus
             servicios, historia y contacto. Funciona en cualquier dispositivo.
           </p>
-          <p class="note">
+          <p class="note" data-key="service2_note">
             Ideal para negocios que quieren presencia sólida y profesional.
           </p>
           <p>💲💲</p>
         </div>
 
         <div class="service-card">
-          <h3>🧠 Mantenimiento & Asesoría</h3>
-          <p>
+          <h3 data-key="service3_title">🧠 Mantenimiento & Asesoría</h3>
+          <p data-key="service3_text">
             Actualizaciones, soporte técnico y mejoras continuas para mantener
             tu web rápida y segura todo el año.
           </p>
-          <p class="note">Tranquilidad total sin preocuparte por lo técnico.</p>
+          <p class="note" data-key="service3_note">
+            Tranquilidad total sin preocuparte por lo técnico.
+          </p>
           <p>💲</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <h1>Hablemos</h1>
-      <p class="contact-intro">
+      <h1 data-key="contact_title">Hablemos</h1>
+      <p class="contact-intro" data-key="contact_intro">
         ¿Listo para llevar tu negocio al siguiente nivel?
       </p>
 
       <form class="contact-form">
         <div class="form-group">
           <input type="text" id="name" name="name" placeholder=" " required />
-          <label for="name">Nombre</label>
+          <label for="name" data-key="form_name_label">Nombre</label>
         </div>
         <div class="form-group">
           <input
@@ -149,7 +161,9 @@
             placeholder=" "
             required
           />
-          <label for="email">Correo electrónico</label>
+          <label for="email" data-key="form_email_label"
+            >Correo electrónico</label
+          >
         </div>
         <div class="form-group">
           <textarea
@@ -159,9 +173,11 @@
             placeholder=" "
             required
           ></textarea>
-          <label for="message">Tu mensaje</label>
+          <label for="message" data-key="form_message_label">Tu mensaje</label>
         </div>
-        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        <button type="submit" class="submit-btn" data-key="form_submit_button">
+          Enviar Mensaje
+        </button>
       </form>
     </section>
 
@@ -169,13 +185,13 @@
 
     <footer>
       <div class="footer-content">
-        <p>
+        <p data-key="footer_copyright">
           &copy; 2025 Eduardo Rios | Full-Stack Developer. All rights reserved.
         </p>
         <div class="footer-links">
           <a>
             <img src="images/gmail.svg" alt="Gmail" class="footer-icon" />
-            eduardo.rios.salgado@gmail.com
+            <span data-key="footer_email">eduardo.rios.salgado@gmail.com</span>
           </a>
 
           <a
@@ -183,11 +199,11 @@
             target="_blank"
           >
             <img src="images/linkedin.svg" alt="LinkedIn" class="footer-icon" />
-            LinkedIn
+            <span data-key="footer_linkedin">LinkedIn</span>
           </a>
           <a href="https://github.com/EduardRios" target="_blank">
             <img src="images/github.svg" alt="GitHub" class="footer-icon" />
-            GitHub
+            <span data-key="footer_github">GitHub</span>
           </a>
         </div>
       </div>
