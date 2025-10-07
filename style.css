@@ -1,3 +1,51 @@
+/* CSS Variables for Light and Dark Themes */
+:root {
+  --bg-color: #f0f2f5;
+  --text-color: #333;
+  --heading-color: #1a1a1a;
+  --nav-bg: #ffffffcc;
+  --nav-link-color: #111;
+  --section-bg-light: #ffffff;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --accent-color: #007bff;
+  --button-bg: #000;
+  --button-text: #fff;
+  --button-hover-bg: #333;
+  --input-bg: #f9fafb;
+  --input-border-color: #ccc;
+  --label-color: #888;
+  --footer-bg: #1a1a1a;
+  --footer-text-color: #f0f2f5;
+  --footer-subtext-color: #aaa;
+  --theme-switcher-bg: #f0f0f0;
+  --theme-switcher-color: #333;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --heading-color: #ffffff;
+  --nav-bg: #1a1a1acc;
+  --nav-link-color: #e0e0e0;
+  --section-bg-light: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --card-shadow: rgba(0, 0, 0, 0.2);
+  --accent-color: #0099ff;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --button-hover-bg: #0056b3;
+  --input-bg: #2a2a2a;
+  --input-border-color: #555;
+  --label-color: #aaa;
+  --footer-bg: #1a1a1a;
+  --footer-text-color: #f0f2f5;
+  --footer-subtext-color: #aaa;
+  --theme-switcher-bg: #333;
+  --theme-switcher-color: #fff;
+}
+
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -6,8 +54,9 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 nav {
@@ -18,16 +67,16 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  background: #ffffffcc;
+  background: var(--nav-bg);
   backdrop-filter: blur(8px); 
   padding: 18px 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px var(--card-shadow);
 }
 
 nav a {
   text-decoration: none;
-  color: #111;
+  color: var(--nav-link-color);
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -35,7 +84,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #007bff;
+  color: var(--accent-color);
   transform: translateY(-2px);
 }
 
@@ -50,8 +99,8 @@ nav a:hover {
 
 #lang-switcher button {
   background: transparent;
-  border: 1px solid #ddd;
-  color: #333;
+  border: 1px solid var(--input-border-color);
+  color: var(--text-color);
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -60,12 +109,50 @@ nav a:hover {
 }
 
 #lang-switcher button:hover {
-  background-color: #f0f0f0;
+  background-color: var(--theme-switcher-bg);
 }
 
 #lang-switcher button.active {
-  background-color: #000;
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+/* Theme Switcher Styles */
+#theme-switcher {
+  position: absolute;
+  left: 150px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#theme-toggle-btn {
+  background: var(--theme-switcher-bg);
+  border: 1px solid var(--input-border-color);
+  color: var(--text-color);
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+  box-sizing: border-box;
+}
+
+#theme-icon {
+  height: 16px;
+  width: 16px;
+}
+
+body.dark-mode #theme-icon {
+  filter: invert(1);
+}
+
+#theme-toggle-btn:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-text);
 }
 
 
@@ -82,7 +169,7 @@ section {
 
 /* Hero Section - Professional Layout */
 #hero {
-  background-color: #ffffff;
+  background-color: var(--section-bg-light);
   padding: 80px 20px 20px;
   text-align: center;
   justify-content: flex-start;
@@ -97,7 +184,7 @@ section {
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 60px;
-  color: #1a1a1a;
+  color: var(--heading-color);
   font-weight: 600;
 }
 
@@ -125,12 +212,12 @@ section {
   max-width: 500px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px var(--card-shadow);
 }
 
 #contact-btn, .submit-btn {
-  background-color: #000;
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   padding: 16px 25px; 
   border: none;
   border-radius: 8px; 
@@ -145,18 +232,18 @@ section {
 }
 
 #contact-btn:hover, .submit-btn:hover {
-  background-color: #333; 
+  background-color: var(--button-hover-bg); 
   transform: translateY(-3px); 
 }
 
 
 .card {
-  background: white;
+  background: var(--card-bg);
   margin: 10px;
   padding: 20px;
   display: inline-block;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px var(--card-shadow);
   width: 250px;
 }
 
@@ -169,7 +256,7 @@ section {
     justify-content: center;
   }
 
-  #lang-switcher {
+  #lang-switcher, #theme-switcher {
     position: static;
     transform: none;
   }
@@ -242,7 +329,7 @@ section {
 #contact h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #222;
+  color: var(--heading-color);
 }
 
 .benefits-intro,
@@ -251,7 +338,7 @@ section {
   font-size: 1.2rem;
   max-width: 900px;
   margin: 0 auto 40px auto;
-  color: #555;
+  color: var(--text-color);
 }
 
 .benefits-container,
@@ -262,10 +349,10 @@ section {
 }
 
 .benefit-card {
-  background: white;
+  background: var(--card-bg);
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px var(--card-shadow);
   transition: transform 0.2s;
 }
 
@@ -277,15 +364,15 @@ section {
 #services {
   padding: 80px 20px 20px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--section-bg-light);
   justify-content: flex-start;
 }
 
 .service-card {
-  background: white;
+  background: var(--card-bg);
   padding: 50px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px var(--card-shadow);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -295,7 +382,7 @@ section {
 }
 
 .service-card p {
-  color: #555;
+  color: var(--text-color);
   font-size: 0.95rem;
 }
 
@@ -323,11 +410,12 @@ section {
 .form-group textarea {
   width: 100%;
   padding: 18px 15px;
-  border: 1px solid #ccc; /* Lighter border */
+  border: 1px solid var(--input-border-color);
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  background-color: #f9fafb; /* Light background for inputs */
+  background-color: var(--input-bg);
+  color: var(--text-color); /* Make sure input text is readable */
   transition: border-color 0.3s;
   box-sizing: border-box;
 }
@@ -342,10 +430,10 @@ section {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  color: #888;
+  color: var(--label-color);
   pointer-events: none;
   transition: all 0.3s ease;
-  background-color: #f9fafb; /* Match input background */
+  background-color: var(--input-bg); /* Match input background */
   padding: 0 5px;
 }
 
@@ -356,19 +444,19 @@ section {
 .form-group textarea:not(:placeholder-shown) + label {
   top: 0;
   font-size: 0.85rem;
-  color: #007bff;
+  color: var(--accent-color);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--accent-color);
 }
 
 /* Footer Styles */
 footer {
-  background-color: #1a1a1a; /* Dark background for contrast */
-  color: #f0f2f5; /* Light text color */
+  background-color: var(--footer-bg);
+  color: var(--footer-text-color);
   text-align: center;
   padding: 40px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -394,7 +482,7 @@ footer {
 .footer-content p {
   margin: 0;
   font-size: 0.9rem;
-  color: #aaa;
+  color: var(--footer-subtext-color);
 }
 
 .footer-links {
@@ -408,10 +496,16 @@ footer {
   width: 18px;
   height: 18px;
   margin-right: 8px;
+  transition: filter 0.3s;
 }
 
+body.dark-mode .footer-icon {
+    filter: invert(1); /* Invert icons in dark mode */
+}
+
+
 .footer-links a {
-  color: #f0f2f5;
+  color: var(--footer-text-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -420,7 +514,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #007bff; /* Highlight color on hover */
+  color: var(--accent-color); /* Highlight color on hover */
 }
 
 /* Responsive adjustment for the footer */

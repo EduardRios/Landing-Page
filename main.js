@@ -136,6 +136,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const savedLang = localStorage.getItem('language') || 'es';
   setLanguage(savedLang);
+
+  // 3. Theme Switcher Logic
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const body = document.body;
+  const themeIcon = document.getElementById('theme-icon');
+
+  const applyTheme = (theme) => {
+    if (theme === 'dark') {
+      body.classList.add('dark-mode');
+      if (themeIcon) themeIcon.src = 'images/dayMode.svg';
+    } else {
+      body.classList.remove('dark-mode');
+      if (themeIcon) themeIcon.src = 'images/darkMode.svg';
+    }
+  };
+
+  themeToggleBtn.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme || 'light');
 });
 
 // Smooth scroll for contact button
