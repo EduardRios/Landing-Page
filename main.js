@@ -45,7 +45,7 @@ const translations = {
     form_email_label: "Correo electrónico",
     form_message_label: "Tu mensaje",
     form_submit_button: "Enviar Mensaje",
-    footer_copyright: "&copy; 2025 Eduardo Rios | Full-Stack Developer. All rights reserved.",
+    footer_copyright: "&copy; 2025 Eduardo Rios | Full-Stack Developer. Rights reserved.",
     footer_email: "eduardo.rios.salgado@gmail.com",
     footer_linkedin: "LinkedIn",
     footer_github: "GitHub"
@@ -94,7 +94,7 @@ const translations = {
     form_email_label: "Email",
     form_message_label: "Your message",
     form_submit_button: "Send Message",
-    footer_copyright: "&copy; 2025 Eduardo Rios | Full-Stack Developer. All rights reserved.",
+    footer_copyright: "&copy; 2025 Eduardo Rios | Full-Stack Developer. Rights reserved.",
     footer_email: "eduardo.rios.salgado@gmail.com",
     footer_linkedin: "LinkedIn",
     footer_github: "GitHub"
