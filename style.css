@@ -59,6 +59,12 @@ body {
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -165,6 +171,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /* Hero Section - Professional Layout */
@@ -173,13 +180,9 @@ section {
   padding: 80px 20px 20px;
   text-align: center;
   justify-content: flex-start;
-  align-items: center;
 }
 
-#hero > * {
-  max-width: 1200px;
-  width: 100%;
-}
+
 
 #hero h1 {
   font-size: 3rem;
@@ -463,6 +466,7 @@ footer {
 }
 
 #contact footer {
+  align-self: stretch;
   margin-top: auto;
   margin-left: -20px;
   margin-right: -20px;
