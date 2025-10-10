@@ -7,10 +7,10 @@ const translations = {
     nav_services: "Servicios",
     nav_contact: "Contacto",
     hero_title: "¿Tu negocio aún no tiene página web?",
-    hero_text: `Impulsa tu marca con un sitio profesional y moderno.<br />
-            Llega a más clientes, transmite confianza y mantente disponible las
+    hero_text: `- Impulsa tu marca con un sitio profesional y moderno.<br />
+            - Llega a más clientes, transmite confianza y mantente disponible las
             24 horas. <br />
-            Comienza hoy a construir un negocio más visible, confiable y
+            - Comienza hoy a construir un negocio más visible, confiable y
             preparado para crecer.`,
     hero_button: "Contáctame",
     benefits_title: "¿Por qué tu negocio necesita una página web?",
@@ -39,6 +39,9 @@ const translations = {
     service3_title: "🧠 Mantenimiento & Asesoría",
     service3_text: "Actualizaciones, soporte técnico y mejoras continuas para mantener tu web rápida y segura todo el año.",
     service3_note: "Tranquilidad total sin preocuparte por lo técnico.",
+    service4_title:"📱 Desarrollo de Aplicaciones Móviles",
+    service4_text:"Aplicaciones modernas, rápidas y fáciles de usar, diseñadas para ofrecer la mejor experiencia a tus usuarios.",
+    service4_note:"Ideal para negocios o emprendedores que buscan crecer con soluciones móviles innovadoras.",
     contact_title: "Hablemos",
     contact_intro: "¿Listo para llevar tu negocio al siguiente nivel?",
     form_name_label: "Nombre",
@@ -57,10 +60,10 @@ const translations = {
     nav_services: "Services",
     nav_contact: "Contact",
     hero_title: "Doesn't your business have a website yet?",
-    hero_text: `Boost your brand with a professional and modern site.<br />
-            Reach more customers, convey trust, and stay available 24/7.
+    hero_text: `- Boost your brand with a professional and modern site.<br />
+            - Reach more customers, convey trust, and stay available 24/7.
             <br />
-            Start building a more visible, reliable, and growth-ready business today.`,
+            - Start building a more visible, reliable, and growth-ready business today.`,
     hero_button: "Contact Me",
     benefits_title: "Why does your business need a website?",
     benefits_intro: `It's not an expense, it's an investment that drives your growth. <br />
@@ -88,6 +91,9 @@ const translations = {
     service3_title: "🧠 Maintenance & Consulting",
     service3_text: "Updates, technical support, and continuous improvements to keep your website fast and secure all year round.",
     service3_note: "Total peace of mind without worrying about the technical side.",
+    service4_title:"📱 Mobile App Development",
+    service4_text:"Modern, fast, and easy-to-use apps designed to deliver the best experience for your users.",
+    service4_note:"Perfect for businesses or entrepreneurs looking to grow through innovative mobile solutions.",
     contact_title: "Let's Talk",
     contact_intro: "Ready to take your business to the next level?",
     form_name_label: "Name",

@@ -183,7 +183,6 @@ section {
 }
 
 
-
 #hero h1 {
   font-size: 3rem;
   margin-bottom: 60px;
@@ -373,7 +372,7 @@ section {
 
 .service-card {
   background: var(--card-bg);
-  padding: 50px;
+  padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
   transition: transform 0.2s, box-shadow 0.2s;
