@@ -166,6 +166,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const savedTheme = localStorage.getItem('theme');
   applyTheme(savedTheme || 'light');
+
+  // 4. Hero Image Slideshow
+  const slideshow = document.querySelector('.slideshow-container');
+  if (slideshow) {
+    const images = slideshow.querySelectorAll('.hero-img');
+    let currentImageIndex = 0;
+
+    if (images.length > 1) {
+      setInterval(() => {
+        images[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.add('active');
+      }, 5000); // Change every 5 seconds
+    }
+  }
 });
 
 // Smooth scroll for contact button
