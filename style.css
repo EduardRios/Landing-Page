@@ -177,7 +177,7 @@ section {
 /* Hero Section - Professional Layout */
 #hero {
   background-color: var(--section-bg-light);
-  padding: 80px 20px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -341,6 +341,16 @@ section {
     padding: 35px 25px;
   }
 
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
   .contact-form {
     gap: 20px;
   }
@@ -422,16 +432,74 @@ section {
 #contact {
   padding: 80px 20px 0;
   text-align: center;
-  justify-content: flex-start;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-details a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  transition: color 0.3s;
+}
+
+.contact-details a:hover {
+  color: var(--accent-color);
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+}
+
+body.dark-mode .contact-icon {
+  filter: invert(1);
+}
+
+.map-placeholder {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  color: var(--label-color);
+  margin-top: 20px;
 }
 
 .contact-form {
+  flex: 1.2; /* Give form a bit more space */
   width: 100%;
-  max-width: 550px; /* Slightly narrower */
-  margin: 0 auto;
+  max-width: none; /* Remove max-width from form itself */
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 25px; /* Increased gap */
+  gap: 25px;
 }
 
 .form-group {
@@ -519,8 +587,8 @@ footer {
 
 .footer-links {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  gap: 25px;
   align-items: center;
 }
 
@@ -553,11 +621,8 @@ body.dark-mode .footer-icon {
 @media (min-width: 768px) {
   .footer-content {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
-  .footer-links {
-    flex-direction: row;
-    gap: 25px;
-  }
+
 }

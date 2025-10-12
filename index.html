@@ -188,43 +188,82 @@
           ¿Listo para llevar tu negocio al siguiente nivel?
         </p>
 
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" id="name" name="name" placeholder=" " required />
-            <label for="name" data-key="form_name_label">Nombre</label>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3 data-key="contact_info_title">Información de Contacto</h3>
+            <p data-key="contact_info_text">
+              Siempre estoy abierto a discutir nuevos proyectos, ideas creativas
+              u oportunidades para ser parte de tus visiones. No dudes en
+              contactarme.
+            </p>
+            <div class="contact-details">
+              <a href="mailto:eduardo.rios.salgado@gmail.com">
+                <img src="images/gmail.svg" alt="Gmail" class="contact-icon" />
+                <span>eduardo.rios.salgado@gmail.com</span>
+              </a>
+            </div>
+            <!-- Placeholder for a map -->
+            <div class="map-placeholder">
+              <p data-key="contact_map_placeholder">
+                [Aquí podría ir un mapa interactivo]
+              </p>
+            </div>
           </div>
-          <div class="form-group">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder=" "
-              required
-            />
-            <label for="email" data-key="form_email_label"
-              >Correo electrónico</label
+
+          <form class="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder=" "
+                required
+              />
+              <label for="name" data-key="form_name_label">Nombre</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder=" "
+                required
+              />
+              <label for="email" data-key="form_email_label"
+                >Correo electrónico</label
+              >
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder=" "
+                required
+              />
+              <label for="subject" data-key="form_subject_label">Asunto</label>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder=" "
+                required
+              ></textarea>
+              <label for="message" data-key="form_message_label"
+                >Tu mensaje</label
+              >
+            </div>
+            <button
+              type="submit"
+              class="submit-btn"
+              data-key="form_submit_button"
             >
-          </div>
-          <div class="form-group">
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder=" "
-              required
-            ></textarea>
-            <label for="message" data-key="form_message_label"
-              >Tu mensaje</label
-            >
-          </div>
-          <button
-            type="submit"
-            class="submit-btn"
-            data-key="form_submit_button"
-          >
-            Enviar Mensaje
-          </button>
-        </form>
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
       </div>
       <footer>
         <div class="footer-content">
@@ -233,13 +272,6 @@
             reserved.
           </p>
           <div class="footer-links">
-            <a>
-              <img src="images/gmail.svg" alt="Gmail" class="footer-icon" />
-              <span data-key="footer_email"
-                >eduardo.rios.salgado@gmail.com</span
-              >
-            </a>
-
             <a
               href="https://www.linkedin.com/in/eduardo-rios-94100a201/"
               target="_blank"
