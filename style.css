@@ -416,7 +416,7 @@ section {
   border-radius: 12px;
   box-shadow: none; /* Remove shadow from the main card */
   perspective: 1000px; /* Add perspective for 3D effect */
-  min-height: 300px; /* Ensure cards have a consistent height */
+  min-height: 350px; /* Ensure cards have a consistent height */
 }
 
 .service-card-inner {
@@ -444,12 +444,20 @@ section {
   box-sizing: border-box; /* Ensure padding is included in height/width */
 }
 
-.service-card-back {
-  transform: rotateY(180deg);
+.service-card-front {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.service-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
 }
 
 .service-card-back h3 {
