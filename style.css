@@ -439,7 +439,7 @@ section {
   gap: 50px;
   width: 100%;
   max-width: 1100px;
-  margin: 40px auto 0;
+  margin: 40px auto;
   text-align: left;
 }
 
@@ -450,7 +450,6 @@ section {
 .contact-info h3 {
   font-size: 1.5rem;
   color: var(--heading-color);
-  margin-bottom: 20px;
 }
 
 .contact-info p {
@@ -482,14 +481,11 @@ body.dark-mode .contact-icon {
   filter: invert(1);
 }
 
-.map-placeholder {
-  background-color: var(--input-bg);
-  border: 1px solid var(--input-border-color);
+#map {
+  height: 250px;
+  width: 100%;
   border-radius: 8px;
-  padding: 40px;
-  text-align: center;
-  color: var(--label-color);
-  margin-top: 20px;
+  box-shadow: 0 4px 12px var(--card-shadow);
 }
 
 .contact-form {

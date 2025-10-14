@@ -187,6 +187,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 5000); // Change every 5 seconds
     }
   }
+
+  // 5. Interactive Map Logic
+  if (document.getElementById("map")) {
+    const mapElement = document.getElementById("map");
+    const quitoCoords = [-0.180653, -78.467834];
+
+    // Initialize map with a wide view
+    const map = L.map(mapElement).setView([0, -30], 5);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Add marker immediately but keep it ready
+    const marker = L.marker(quitoCoords).addTo(map).bindPopup("<b>Quito, Ecuador</b>");
+
+    const animationCallback = (entries, observer) => {
+      entries.forEach((entry) => {
+        // When the map enters the viewport
+        if (entry.isIntersecting) {
+          // Animate the zoom
+          map.flyTo(quitoCoords, 13, {
+            animate: true,
+            duration: 2,
+          });
+          marker.openPopup();
+
+          // Stop observing the element so the animation doesn't re-run
+          observer.unobserve(mapElement);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(animationCallback, {
+      threshold: 0.5, // Trigger when 50% of the map is visible
+    });
+
+    // Start observing the map element
+    observer.observe(mapElement);
+  }
 });
 
 // Smooth scroll for contact button
