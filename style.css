@@ -123,44 +123,12 @@ nav a:hover {
   color: var(--button-text);
 }
 
-/* Theme Switcher Styles */
 #theme-switcher {
   position: absolute;
   right: 40px;
   top: 50%;
   transform: translateY(-50%);
 }
-
-#theme-toggle-btn {
-  background: var(--theme-switcher-bg);
-  border: 1px solid var(--input-border-color);
-  color: var(--text-color);
-  padding: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 28px;
-  width: 28px;
-  box-sizing: border-box;
-}
-
-#theme-icon {
-  height: 16px;
-  width: 16px;
-}
-
-body.dark-mode #theme-icon {
-  filter: invert(1);
-}
-
-#theme-toggle-btn:hover {
-  background-color: var(--button-hover-bg);
-  color: var(--button-text);
-}
-
 
 section {
   padding: 40px 20px;
