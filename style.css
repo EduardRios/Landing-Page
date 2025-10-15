@@ -126,7 +126,7 @@ nav a:hover {
 /* Theme Switcher Styles */
 #theme-switcher {
   position: absolute;
-  left: 150px; /* Adjust as needed */
+  right: 40px;
   top: 50%;
   transform: translateY(-50%);
 }
