@@ -679,3 +679,29 @@ body.dark-mode .footer-icon {
 
 
 }
+
+.touch-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  animation: touch-animation 1.5s infinite;
+  opacity: 0.7;
+}
+
+body.dark-mode .touch-icon {
+  filter: invert(1);
+}
+
+@keyframes touch-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
