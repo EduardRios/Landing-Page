@@ -143,8 +143,16 @@ const translations = {
 
 // 2. Language Switcher Logic
 document.addEventListener('DOMContentLoaded', () => {
-  const langSwitcher = document.getElementById('lang-switcher');
+  const langSwitcherPlaceholder = document.getElementById('lang-switcher-placeholder');
   const translatableElements = document.querySelectorAll('[data-key]');
+
+  // Fetch and insert the language switcher component
+  fetch('components/dropDown.html')
+    .then(response => response.text())
+    .then(html => {
+      langSwitcherPlaceholder.innerHTML = html;
+      initializeLangSwitcher();
+    });
 
   const setLanguage = (lang) => {
     const translationSet = translations[lang];
@@ -158,21 +166,56 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    langSwitcher.querySelectorAll('button').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
+    // Update the checked state of the radio buttons
+    const langRadio = document.getElementById(lang);
+    if (langRadio) {
+      langRadio.checked = true;
+    }
+
+    // Update the main button's display
+    const langPopup = document.querySelector('.lang-popup');
+    if (langPopup) {
+      const mainButton = langPopup.querySelector('.lang-popup__button');
+      const selectedLangIcon = mainButton.querySelector(`.lang-popup__icons .${lang}`);
+      const langNameSpan = mainButton.querySelector('.lang-name');
+
+      // Hide all icons first
+      mainButton.querySelectorAll('.lang-popup__icons svg').forEach(icon => {
+        icon.style.display = 'none';
+      });
+
+      // Show the selected one
+      if (selectedLangIcon) {
+        selectedLangIcon.style.display = 'block';
+      }
+
+      if (langNameSpan) {
+        langNameSpan.textContent = lang.toUpperCase();
+      }
+    }
 
     localStorage.setItem('language', lang);
   };
 
-  langSwitcher.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON') {
-      const lang = e.target.dataset.lang;
-      if (lang) {
-        setLanguage(lang);
-      }
-    }
-  });
+  const initializeLangSwitcher = () => {
+    const langRadios = document.querySelectorAll('.lang-popup input[name="lang"]');
+    langRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        if (lang) {
+          setLanguage(lang);
+          // Close the dropdown after selection
+          const langCheckbox = document.getElementById('lang-checkbox');
+          if (langCheckbox) {
+            langCheckbox.checked = false;
+          }
+        }
+      });
+    });
+
+    const savedLang = localStorage.getItem('language') || 'es';
+    setLanguage(savedLang);
+  };
 
   const savedLang = localStorage.getItem('language') || 'es';
   setLanguage(savedLang);
