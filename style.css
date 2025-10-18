@@ -95,6 +95,13 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+#lang-switcher-placeholder {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 #theme-switcher {
   position: absolute;
@@ -224,19 +231,32 @@ section {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   nav {
-    gap: 10px;
-    padding: 15px 10px;
-    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 60px; /* Provide space for the absolute positioned switchers */
   }
 
-  #lang-switcher, #theme-switcher {
-    position: static;
-    transform: none;
+  #lang-switcher-placeholder {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #theme-switcher {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   nav a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   section {

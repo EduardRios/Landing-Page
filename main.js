@@ -7,10 +7,10 @@ const translations = {
     nav_services: "Servicios",
     nav_contact: "Contacto",
     hero_title: "¿Tu negocio aún no tiene página web?",
-    hero_text: `- Impulsa tu marca con un sitio profesional y moderno.<br />
-            - Llega a más clientes, transmite confianza y mantente disponible las
+    hero_text: `Impulsa tu marca con un sitio profesional y moderno.<br />
+            Llega a más clientes, transmite confianza y mantente disponible las
             24 horas. <br />
-            - Comienza hoy a construir un negocio más visible, confiable y
+            Comienza hoy a construir un negocio más visible, confiable y
             preparado para crecer.`,
     hero_button: "Contáctame",
     benefits_title: "¿Por qué tu negocio necesita una página web?",
@@ -141,6 +141,11 @@ const translations = {
   }
 };
 
+const flagMap = {
+  en: 'US',
+  es: 'ES'
+};
+
 // 2. Language Switcher Logic
 document.addEventListener('DOMContentLoaded', () => {
   const langSwitcherPlaceholder = document.getElementById('lang-switcher-placeholder');
@@ -166,49 +171,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Update the checked state of the radio buttons
-    const langRadio = document.getElementById(lang);
-    if (langRadio) {
-      langRadio.checked = true;
-    }
-
     // Update the main button's display
-    const langPopup = document.querySelector('.lang-popup');
-    if (langPopup) {
-      const mainButton = langPopup.querySelector('.lang-popup__button');
-      const selectedLangIcon = mainButton.querySelector(`.lang-popup__icons .${lang}`);
-      const langNameSpan = mainButton.querySelector('.lang-name');
+    const currentLangFlag = document.getElementById('current-lang-flag');
+    const currentLangText = document.getElementById('current-lang-text');
 
-      // Hide all icons first
-      mainButton.querySelectorAll('.lang-popup__icons svg').forEach(icon => {
-        icon.style.display = 'none';
-      });
-
-      // Show the selected one
-      if (selectedLangIcon) {
-        selectedLangIcon.style.display = 'block';
-      }
-
-      if (langNameSpan) {
-        langNameSpan.textContent = lang.toUpperCase();
-      }
+    if (currentLangFlag) {
+      const flagCode = flagMap[lang];
+      currentLangFlag.src = `images/flag${flagCode}.svg`;
+      currentLangFlag.alt = `${flagCode} Flag`;
+    }
+    if (currentLangText) {
+      currentLangText.textContent = lang;
     }
 
     localStorage.setItem('language', lang);
   };
 
   const initializeLangSwitcher = () => {
-    const langRadios = document.querySelectorAll('.lang-popup input[name="lang"]');
-    langRadios.forEach(radio => {
-      radio.addEventListener('change', (e) => {
-        const lang = e.target.value;
+    const langLinks = document.querySelectorAll('.tooltip-link[data-lang]');
+    langLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = link.getAttribute('data-lang');
         if (lang) {
           setLanguage(lang);
-          // Close the dropdown after selection
-          const langCheckbox = document.getElementById('lang-checkbox');
-          if (langCheckbox) {
-            langCheckbox.checked = false;
-          }
         }
       });
     });
